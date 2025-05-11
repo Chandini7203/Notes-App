@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 90vw;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #4b0082;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #764ba2;
+    border-radius: 8px;
+    resize: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 8px #667eea;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #5a368a;
+    transform: scale(1.05);
+}
+
+#clearBtn {
+    background-color: #e94e77;
+    margin-top: 10px;
+}
+
+#clearBtn:hover {
+    background-color: #c43d63;
+}
+
+#notesList {
+    margin-top: 25px;
+}
+
+.note {
+    background-color: #f3e8ff;
+    padding: 12px;
+    border: 1px solid #d1b3ff;
+    margin-top: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #4b0082;
+    box-shadow: 0 2px 6px rgba(118, 75, 162, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.4s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
